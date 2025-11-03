@@ -1,12 +1,31 @@
-# Local .terraform directories and files
-**/.terraform/*
-.terraform*
-
-!.terraformrc
-
-# .tfstate files
-*.tfstate
-*.tfstate.*
 
 # own secret vars store.
 personal.auto.tfvars
+# Local terraform directories
+**/.terraform/*
+.terraform/
+.terraform.lock.hcl
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+terraform.tfstate
+terraform.tfstate.backup
+
+# Sensitive variables and credentials
+*.tfvars
+*.tfvars.json
+authorized_key.json
+*.key
+*.pem
+
+# Ignore any temp or debug files
+*.bak
+*.log
+
+# Allow example variable files
+!terraform.tfvars.example
+
+# Allow terraform config
+!*.tf
+
